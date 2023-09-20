@@ -70,14 +70,6 @@ body {
   border-bottom: 2px solid #9cd0ff;
   margin-left: 8px;
 }
-.summary1 {
-  color: #d2e9fa;
-  font-size: 1.2em;
-  font-weight: 300;
-  width: 260px;
-  margin-top: -20px;
-margin-left: 20px;
-}
 .summaryText {
   margin: 0;
   margin-left: 56px;
@@ -107,9 +99,10 @@ margin-left: 20px;
 }
 .location{
   color: #d2e9fa;
-  font-size: 1.8em;
+  font-size: 2em;
   font-weight: 700;
   margin-left: 10px;
+  margin-bottom: 40px;
 }
 
 .weather-img{
@@ -136,4 +129,33 @@ img{
   height: 35px;
   width: 35px;
   margin: auto;
+}
+.form-div{
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+}
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button{
+  width: 100%;
+  background-color:#0031c6;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;font-size: .8em;
+  border-radius: 4px;
+  cursor: pointer;
+}
+td{
+  min-width: 8vw;
+  max-width: 8vw;
 }
