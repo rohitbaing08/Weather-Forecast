@@ -36,16 +36,6 @@ body {
   justify-content: space-between;
 }
 
-.iconBig {
-  position: absolute;
-  border-radius: 50%;
-  background: #9cd0ff;
-  height: 36px;
-  width: 36px;
-  top: 220px;
-  left: 80px;
-}
-
 
 .details{
   font-family: Roboto, sans-serif;
@@ -71,8 +61,7 @@ body {
   margin-left: 8px;
 }
 .summaryText {
-  margin: 0;
-  margin-left: 56px;
+  margin: 0px;
 }
 .precipitation, .wind, .humidity  {
   color: #d2e9fa;
