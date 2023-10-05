@@ -12,6 +12,7 @@ body {
 }
 
 .container {
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,11 +21,13 @@ body {
 }
 .tables{
   margin: 20px auto;
+
 }
 .widget {
+  padding-bottom: 20px;
   background: linear-gradient(to bottom right, #3cc0fe 20%, #0066ff);
   width: 1000px;
-  height: 650px;
+  height: 95vh;
   border-radius: 6px;
   box-shadow: 0px 60px 80px -20px rgba(#27a5fd, 0.4);
   position: relative;
@@ -54,7 +57,7 @@ body {
   color: #d2e9fa;
   font-size: 2em;
   font-weight: 300;
-  width: 260px;
+  width: 350px;
   margin-top: 10px;
   padding-bottom: 16px;
   border-bottom: 2px solid #9cd0ff;

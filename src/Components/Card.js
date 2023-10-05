@@ -29,7 +29,7 @@ const Card = () => {
     try {
       axios
         .get(
-          `http://api.worldweatheronline.com/premium/v1/weather.ashx?key=d7b1eb06630f4f8798a174343231509&q=${cityInput}&num_of_days=2&format=json`
+          `http://api.worldweatheronline.com/premium/v1/weather.ashx?key=${process.env.REACT_APP_WEATHER_API_KEY}&q=${cityInput}&num_of_days=2&format=json`
         )
         .then((res) => {
           if (!res.data.data.error) {
@@ -53,17 +53,17 @@ const Card = () => {
         try {
           axios
             .get(
-              `https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=dd2a410fd154437dac9e7127a9107d33`
+              `https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=${process.env.REACT_APP_LOCATION_API_KEY}`
             )
             .then((res) => {
               setCity(`${res.data.results[0].components.city},`);
             });
           axios
             .get(
-              `http://api.worldweatheronline.com/premium/v1/weather.ashx?key=d7b1eb06630f4f8798a174343231509&q=${latitude},${longitude}&num_of_days=2&format=json`
+              `http://api.worldweatheronline.com/premium/v1/weather.ashx?key=${process.env.REACT_APP_WEATHER_API_KEY}&q=${latitude},${longitude}&num_of_days=2&format=json`
             )
             .then((res) => {
-              if (res.status == 200) {
+              if (res.status === 200) {
                 setData(res.data.data.current_condition[0]);
                 setDesc(
                   res.data.data.current_condition[0].weatherDesc[0].value
